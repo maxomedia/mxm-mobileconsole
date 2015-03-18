@@ -1,0 +1,70 @@
+#console {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 0em 1em;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+	font-family: "courier new", courier, monospace;
+	font-size: 11px;
+	color: #000;
+	line-height: 1em;
+	z-index: 100000;
+	-webkit-transition: all 400ms ease-out; -moz-transition: all 400ms ease-out; -ms-transition: all 400ms ease-out; -o-transition: all 400ms ease-out; transition: all 400ms ease-out;
+}
+
+#console.top {
+	bottom: auto;
+	top: 0;
+}
+
+#console:before {
+	display: block;
+	content: "mobile Console";
+	position: absolute;
+	bottom: 100%;
+	left: 25%;
+	right: 25%;
+	background-color: #fff;
+	border: solid #999;
+	border-width: 1px 0 0;
+	font-size: 9px;
+	text-align: center;
+	-webkit-border-radius: 50% 50% 0 0; -moz-border-radius: 50% 50% 0 0; -ms-border-radius: 50% 50% 0 0; -o-border-radius: 50% 50% 0 0; border-radius: 50% 50% 0 0;
+	-webkit-transition: all 400ms ease-out; -moz-transition: all 400ms ease-out; -ms-transition: all 400ms ease-out; -o-transition: all 400ms ease-out; transition: all 400ms ease-out;
+}
+
+#console.top:before {
+	bottom: auto;
+	top: 100%;
+	border-width: 0 0 1px;
+	-webkit-border-radius: 0 0 50% 50%; -moz-border-radius: 0 0 50% 50%; -ms-border-radius: 0 0 50% 50%; -o-border-radius: 0 0 50% 50%; border-radius: 0 0 50% 50%;
+}
+
+#console > div {
+	overflow: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	max-height: 0em;
+	-webkit-transition: all 400ms ease-out; -moz-transition: all 400ms ease-out; -ms-transition: all 400ms ease-out; -o-transition: all 400ms ease-out; transition: all 400ms ease-out;
+}
+
+#console > div > div {
+	padding: 0.25em;
+	border-bottom: 1px solid #ccc;
+}
+
+#console.visible {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#console.visible:before {
+	left: 0%;
+	right: 0%;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.25); -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.25); -ms-box-shadow: 0 0 10px 0 rgba(0,0,0,0.25); -o-box-shadow: 0 0 10px 0 rgba(0,0,0,0.25); box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+}
+
+#console.visible > div {
+	max-height: 8em;
+}
